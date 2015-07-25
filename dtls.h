@@ -18,7 +18,7 @@
 #define DTLS_RECV SSL_read
 #define DTLS_FREE SSL_free
 
-int start_dtls_handshake(SSL *dtls_ssl, int dtls_fd);
+int start_dtls_handshake(int type, SSL** dtls_ssl, int dtls_fd);
 int dtls_try_handshake();
 void dtls_shutdown();
 int connect_dtls_socket();
